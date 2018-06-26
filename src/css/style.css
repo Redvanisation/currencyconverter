@@ -1,0 +1,51 @@
+.container {
+	text-align: center;
+	position: relative;
+	top: 2em;
+	border: 2px solid rgba(00,00,00,0.1);
+	width: 50%;
+	margin: auto;
+	border-radius: 20px;
+	background-color: rgba(00,00,00,0.2);
+}
+
+.header {
+	margin: auto 0 5em 0;
+}
+
+#amount {
+	display: block;
+	margin: 10px;
+}
+
+#amount-input {
+	width: 30%;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+}
+
+.second-line{
+	display: block;
+	margin-top: 1em;
+}
+
+.third-line {
+	display: block;
+	margin: 1em;
+}
+
+#convert-btn {
+	margin-top: 1em;
+}
+
+#result {
+	display: block;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	outline: none;
+	border-radius: 20px;
+	width: 30%;
+	border: none;
+}

@@ -2,7 +2,7 @@
   "name": "currencyconverter",
   "version": "1.0.0",
   "description": "A currency converter progressive web app",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/Redvanisation/currencyconverter/issues"
   },
-  "homepage": "https://github.com/Redvanisation/currencyconverter#readme"
+  "homepage": "https://github.com/Redvanisation/currencyconverter#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0"
+  }
 }

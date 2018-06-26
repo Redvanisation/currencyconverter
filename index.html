@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
+	<meta charset="utf-8">
+	
 	<title>Redvanisation's Currency Converter</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	
 </head>
 <body>
-	<header><h1>Redvanisation Currecncy Converter</h1></header>
+	<div class="container">
+		<header class="header">
+			<h1>Redvanisation Currecncy Converter</h1>
+		</header>
+		<main class="main">
+			<label class="label" id="amount">Amount: </label><input type="text" id="amount-input">
+			<div class="second-line">
+				<label class="label">From: </label><select></select>
+				<label class="label">To: </label><select></select>
+			</div>
+			<div class="third-line">
+				<button type="submit" id="convert-btn">Convert!</button>
+				<input type="text" id="result">
+			</div>
+		</main>
+	</div>
+
+	<script type="text/javascript" src="src/scripts/app.js"></script>
 </body>
 </html>
