@@ -23,7 +23,7 @@ body {
 }
 
 #amount-input {
-	width: 30%;
+	width: 40%;
 	height: 2em;
 	border-radius: 20px;
 	outline: none;
@@ -35,20 +35,26 @@ body {
 }
 
 .second-line{
-	display: block;
-	margin-top: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 #from {
-	margin-right: 5%;
+	margin-right: 2%;
+	width: 20%;
+	height: 25px;
+	border-radius: 10px;
+	outline: none;
 }
 
-.third-line {
-	display: block;
-	margin: 1em;
+#to {
+	width: 20%;
+	height: 25px;
+	border-radius: 10px;
+	outline: none;
 }
 
-#convert-btn {
+/*#convert-btn {
 	margin-top: 1em;
 	padding: 1em 2em;
 	border-radius: 20px;
@@ -63,16 +69,14 @@ body {
 	border: 2px solid gray;
 	background-color: gray;
 	color: white;
-}
+}*/
 
 #result {
 	display: block;
-	margin: auto;
-	margin-top: 2%;
-	margin-bottom: 5%;
+	margin: 2% auto 5% auto;
 	outline: none;
 	border-radius: 20px;
-	width: 30%;
+	width: 40%;
 	height: 2em;
 	border: none;
 	font-weight: bold;

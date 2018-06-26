@@ -13,18 +13,20 @@
 			<h1>Redvanisation Currecncy Converter</h1>
 		</header>
 		<main class="main">
-			<label class="label" id="amount">Amount: </label><input type="text" id="amount-input">
+			<label class="label" id="amount">Amount: </label><input type="number" id="amount-input">
 			<div class="second-line">
-				<label class="label">From: </label><select id="from"></select>
-				<label class="label">To: </label><select id="to"></select>
+				<label class="label">From: </label>
+				<select id="from"></select>
+				<label class="label">To: </label>
+				<select id="to"></select>
 			</div>
 			<div class="third-line">
-				<button type="submit" id="convert-btn">Convert!</button>
-				<input type="text" id="result">
+				<input type="number" id="result" disabled>
 			</div>
 		</main>
 	</div>
 
+	<script type="text/javascript" src="src/scripts/script.js"></script>
 	<script type="text/javascript" src="src/scripts/app.js"></script>
 </body>
 </html>
