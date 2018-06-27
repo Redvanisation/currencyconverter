@@ -74,3 +74,14 @@ select, .option {
 	padding-right: 2%;
 	color: black;
 }
+
+footer {
+	text-align: center;
+	font-size: smaller;
+	margin-top: 10%;
+}
+
+footer a {
+	text-decoration: none;
+	color: gray;
+}
