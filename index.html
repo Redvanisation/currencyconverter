@@ -13,8 +13,11 @@
 			<h1>Redvanisation Currecncy Converter</h1>
 		</header>
 		<main class="main">
-			<label class="label" id="amount">Amount: </label>
-			<input type="number" id="amount-input" value="1" onkeyup="convertCurrency();">
+			<label class="label" id="amount">
+				<h3>Amount:</h3> 
+				<h4>Please Enter the Desired Amount to Convert</h4>
+			</label>
+			<input type="number" id="amount-input" onkeyup="convertCurrency();">
 			<div class="second-line">
 				<label class="label">From: </label>
 				<select id="from" onchange="convertCurrency();"></select>
@@ -26,6 +29,9 @@
 			</div>
 		</main>
 	</div>
+	<footer>
+		<p>Made by <a href="https://github.com/Redvanisation" target="_blank">Redvanisation</a> 2018</p>
+	</footer>
 
 	<script type="text/javascript" src="src/scripts/script.js"></script>
 	<script type="text/javascript" src="src/scripts/app.js"></script>
