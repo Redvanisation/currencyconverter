@@ -54,24 +54,13 @@ body {
 	outline: none;
 }
 
-/*#convert-btn {
-	margin-top: 1em;
-	padding: 1em 2em;
-	border-radius: 20px;
-	border: 2px solid transparent;
-	outline: none;
+select, .option {
 	font-weight: bold;
-	font-size: 0.9em;
-	cursor: pointer;
+	padding-left: 0.5%;
+	height: 50px;
 }
 
-#convert-btn:hover {
-	border: 2px solid gray;
-	background-color: gray;
-	color: white;
-}*/
-
-#result {
+#result-input {
 	display: block;
 	margin: 2% auto 5% auto;
 	outline: none;
@@ -83,4 +72,5 @@ body {
 	font-size: 1em;
 	padding-left: 2%;
 	padding-right: 2%;
+	color: black;
 }

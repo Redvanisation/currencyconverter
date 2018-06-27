@@ -13,15 +13,16 @@
 			<h1>Redvanisation Currecncy Converter</h1>
 		</header>
 		<main class="main">
-			<label class="label" id="amount">Amount: </label><input type="number" id="amount-input">
+			<label class="label" id="amount">Amount: </label>
+			<input type="number" id="amount-input" value="1" onkeyup="convertCurrency();">
 			<div class="second-line">
 				<label class="label">From: </label>
-				<select id="from"></select>
-				<label class="label">To: </label>
-				<select id="to"></select>
+				<select id="from" onchange="convertCurrency();"></select>
+				<label class="label">To: 
+				<select id="to" onchange="convertCurrency();"></select></label>
 			</div>
 			<div class="third-line">
-				<input type="number" id="result" disabled>
+				<input type="number" id="result-input" disabled>
 			</div>
 		</main>
 	</div>
