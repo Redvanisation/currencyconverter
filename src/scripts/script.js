@@ -6,6 +6,12 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies', {
 .then(res => res.json())
 .then(res =>  {
 	const currencies = res.results;
+
+	const dbCurrencies = idb.open('currenciesList', 3, (upgradeDb) => {
+		const theCurrencies = upgradeDb.createObjectStore('theCurrencies');
+		theCurrencies.put(currencies, 'TheCurrencies');
+	})
+	
 	for (let currency in currencies	) {
 		// making the the default currency as EURO
 		if (currencies[currency].id == "EUR") {

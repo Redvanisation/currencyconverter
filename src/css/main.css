@@ -1,20 +1,57 @@
+/*
+COLOR SCHEME:
+	BLACK/ 	  HEX: #0f0f0f
+		      RGBa: rgba(15,15,15,1)
+	DARKGRAY/ HEX: #2d2d2d
+			  RGBa: rgba(45,45,45,1)
+	LIGHTGRAY/HEX: #a39e9e
+			  RGBa: rgba(163,158,158,1)
+	MOCCA/    HEX: #bc8420
+			  RGBa: rgba(188,132,32,1)
+*/
+/*
+CSS VARIABLES:
+*/
+
+:root {
+--black-hex: #0f0f0f;
+--black-rgba: rgba(15,15,15,0.9);
+--darkgray-hex: #2d2d2d;
+--darkgray-rgba: rgba(45,45,45,1);
+--lightgray-hex: #a39e9e;
+--lightgray-rgba: rgba(163,158,158,0.2);
+--mocca-hex: #bc8420;
+--mocca-rgba: rgba(188,132,32,0.6);
+
+--main-font: 'Raleway', sans-serif;
+}
+
 body {
-	background-color: beige;
+	background-color: var(--black-hex);
+	color: var(--black-rgba);
+	font-family: var(--main-font);
 }
 
 .container {
 	text-align: center;
 	position: relative;
 	top: 2em;
-	border: 2px solid rgba(00,00,00,0.1);
+	padding: 0 0 0.5% 0;
 	width: 50%;
 	margin: auto;
 	border-radius: 20px;
-	background-color: rgba(00,00,00,0.2);
+	background-color: var(--mocca-rgba);
 }
 
 .header {
-	margin: auto 0 5em 0;
+	margin: 0 0 5em 0;
+	font-family: var(--main-font);
+	color: var(--darkgray-hex);
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+	font-weight: 900;
+	background-color: var(--black-hex);
+	height: 100%;
+	width: 100%;
 }
 
 #amount {

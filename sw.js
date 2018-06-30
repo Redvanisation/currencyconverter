@@ -1,6 +1,6 @@
 // Global Variables: 
-const staticCacheName = 'currency-converter-v1';
-//dsdq
+const staticCacheName = 'currency-converter-v2';
+
 // Caching the app pages when the secrvice worker gets installed:
 
 self.addEventListener('install', (event) => {
@@ -8,7 +8,8 @@ self.addEventListener('install', (event) => {
 		'/currencyconverter/',
 		'/currencyconverter/src/scripts/script.js',
 		'/currencyconverter/src/scripts/controller.js',
-		'/currencyconverter/src/css/main.css'
+		'/currencyconverter/src/css/main.css',
+		'https://fonts.googleapis.com/css?family=Raleway:400,700,900'
 	];
 
 	event.waitUntil(
