@@ -52,3 +52,6 @@ const convertCurrency = () => {
 	})
 	.catch(err => console.log('Failed to convert!'))
 }
+
+
+
