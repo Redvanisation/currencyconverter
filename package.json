@@ -27,5 +27,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0"
+  },
+  "dependencies": {
+    "idb": "^2.1.3"
   }
 }
