@@ -1,6 +1,6 @@
 // Global Variables: 
-const staticCacheName = 'currency-converter-v2';
-
+const staticCacheName = 'currency-converter-v1';
+//dsdq
 // Caching the app pages when the secrvice worker gets installed:
 
 self.addEventListener('install', (event) => {
@@ -28,7 +28,7 @@ self.addEventListener('fetch', (event) => {
 			return fetch(event.request);
 		})
 	)
-})
+});
 
 
 // Updating the cache and deleting the old one when the new service worker is activated:
@@ -39,4 +39,10 @@ self.addEventListener('activate', (event) => {
 			cacheNames.filter(cacheName => cacheName.includes('currency-converter-') && cacheName != staticCacheName).map(cacheName => caches.delete(cacheName))
 		})
 	);
-})
+});
+
+self.addEventListener('message', (event) => {
+	if(event.data.action == 'skipWaiting') {
+		self.skipWaiting();
+	}
+});
