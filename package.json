@@ -1,7 +1,7 @@
 {
   "name": "currencyconverter",
   "version": "1.0.0",
-  "description": "A currency converter progressive web app",
+  "description": "A currency converter PWA",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
