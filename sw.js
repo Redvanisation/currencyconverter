@@ -5,9 +5,10 @@ const staticCacheName = 'currency-converter-v1';
 
 self.addEventListener('install', (event) => {
 	const cachedUrls = [
-		'/',
-		'src/scripts/script.js',
-		'src/css/main.css'
+		'/currencyconverter/',
+		'/currencyconverter/src/scripts/script.js',
+		'/currencyconverter/src/scripts/controller.js',
+		'/currencyconverter/src/css/main.css'
 	];
 
 	event.waitUntil(
