@@ -8,27 +8,34 @@ COLOR SCHEME:
 			  RGBa: rgba(163,158,158,1)
 	MOCCA/    HEX: #bc8420
 			  RGBa: rgba(188,132,32,1)
+	KINDOFWHITE/ HEX: #EEEEEE
+				 RGBa: rgba(238,238,238,1)
 */
+
 /*
 CSS VARIABLES:
 */
 
 :root {
+	/*COLOR VARIABLES*/
 --black-hex: #0f0f0f;
 --black-rgba: rgba(15,15,15,0.9);
 --darkgray-hex: #2d2d2d;
---darkgray-rgba: rgba(45,45,45,1);
+--darkgray-rgba: rgba(45,45,45,0.4);
 --lightgray-hex: #a39e9e;
 --lightgray-rgba: rgba(163,158,158,0.2);
 --mocca-hex: #bc8420;
 --mocca-rgba: rgba(188,132,32,0.6);
-
+--whity-hex: #EEEEEE;
+--whity-rgba: rgba(238,238,238,0.3);
+	
+	/* FONT VARIABLE */
 --main-font: 'Raleway', sans-serif;
 }
 
 body {
-	background-color: var(--black-hex);
-	color: var(--black-rgba);
+	background-color: var(--lightgray-rgba);
+	color: var(--mocca-hex);
 	font-family: var(--main-font);
 }
 
@@ -37,32 +44,36 @@ body {
 	position: relative;
 	top: 2em;
 	padding: 0 0 0.5% 0;
-	width: 50%;
+	width: 80%;
 	margin: auto;
 	border-radius: 20px;
-	background-color: var(--mocca-rgba);
+	background-color: var(--black-rgba);
+	box-shadow: 2px 2px 20px var(--darkgray-rgba);
 }
 
 .header {
-	margin: 0 0 5em 0;
+	margin: 0 0 2em 0;
 	font-family: var(--main-font);
-	color: var(--darkgray-hex);
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+	color: var(--mocca-hex);
+	text-shadow: 2px 2px 3px var(--darkgray-rgba);
 	font-weight: 900;
-	background-color: var(--black-hex);
+	background-color: var(--whity-hex);
 	height: 100%;
 	width: 100%;
+	padding: 10px 0;
+	box-shadow: 1px 5px 10px var(--whity-rgba);
+	border-radius: 6px;
+	font-size: larger;
 }
 
 #amount {
-	display: block;
-	margin: 10px;
+	/*display: block;*/
 }
 
 #amount-input {
-	width: 40%;
+	width: 15%;
 	height: 2em;
-	border-radius: 20px;
+	border-radius: 10px;
 	outline: none;
 	border: none;
 	font-weight: bold;
@@ -72,23 +83,28 @@ body {
 }
 
 .second-line{
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	font-weight: bold;
 }
 
 #from {
 	margin-right: 2%;
-	width: 20%;
-	height: 25px;
+	width: 30%;
+	height: 2.5em;
 	border-radius: 10px;
 	outline: none;
+	background-color: var(--mocca-rgba);
+	color: var(--whity-hex);
 }
 
 #to {
-	width: 20%;
-	height: 25px;
+	width: 30%;
+	height: 2.5em;
 	border-radius: 10px;
 	outline: none;
+	background-color: var(--lightgray-hex);
+	color: var(--black-hex);
 }
 
 select, .option {
@@ -101,24 +117,32 @@ select, .option {
 	display: block;
 	margin: 2% auto 5% auto;
 	outline: none;
-	border-radius: 20px;
-	width: 40%;
+	border-radius: 10px;
+	width: 20%;
 	height: 2em;
 	border: none;
 	font-weight: bold;
 	font-size: 1em;
 	padding-left: 2%;
 	padding-right: 2%;
-	color: black;
+	color: var(--black-hex);
 }
 
 footer {
 	text-align: center;
 	font-size: smaller;
+	font-weight: bold;
 	margin-top: 10%;
+	background-color: var(--black-rgba);
+	color: var(--whity-hex);
+	height: 2%;
+	width: 50%;
+	margin: 5% auto 0 auto;
+	padding: 0.5em;
+	border-radius: 15px;
 }
 
 footer a {
 	text-decoration: none;
-	color: gray;
+	color: var(--mocca-hex);
 }
