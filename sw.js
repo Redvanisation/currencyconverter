@@ -9,7 +9,8 @@ self.addEventListener('install', (event) => {
 		'/currencyconverter/src/scripts/script.js',
 		'/currencyconverter/src/scripts/controller.js',
 		'/currencyconverter/src/css/main.css',
-		'https://fonts.googleapis.com/css?family=Raleway:400,700,900'
+		'https://fonts.googleapis.com/css?family=Raleway:400,700,900',
+		'https://free.currencyconverterapi.com/api/v5/currencies'
 	];
 
 	event.waitUntil(
