@@ -2,20 +2,26 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-
+	<meta name="viewport" content="width=device-width, initial-scare=1.0" />
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
 	<title>Redvanisation's Currency Converter</title>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">	
 	<link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
 <body>
+	<div class="icon-container">
+		<i class="fas fa-euro-sign" id="euro"></i>
+	</div>
 	<div class="container">
 		<header class="header">
-			<h1>Redvanisation Currecncy Converter</h1>
+			<h1 id="the-header">Redvanisation Currecncy Converter</h1>
 		</header>
 		<main class="main">
 			<label class="label" id="amount">
 				<h3>Amount:</h3> 
 				<h4>Please Enter the Desired Amount to Convert</h4>
+				<h5>The Chosen Currencies Will be Saved For Offline Use</h5>
 			</label>
 			<input type="number" id="amount-input" onkeyup="convertCurrency();">
 			<div class="second-line">
@@ -32,7 +38,6 @@
 	<footer>
 		<p>Made by <a href="https://github.com/Redvanisation" target="_blank">Redvanisation</a> 2018</p>
 	</footer>
-	<!-- <script type="text/javascript" src="src/scripts/idb.js"></script> -->
 	<script type="text/javascript" src="src/scripts/dexie.js"></script>
 	<script type="text/javascript" src="src/scripts/script.js"></script>
 	<script type="text/javascript" src="src/scripts/controller.js"></script>

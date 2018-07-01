@@ -31,13 +31,6 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies', {
 })
 .catch((err) => console.log('There has been an error!'));
 
-// const dbCurrencies = idb.open('rates', 1, (upgradeDb) => {
-// 	const ratesStore = upgradeDb.createObjectStore('rates');
-// 	ratesStore.put(currencies, 'TheCurrencies');
-// })
-
-//https://free.currencyconverterapi.com/api/v5/convert?q=USD_PHP,PHP_USD
-
 
 // Creating the conversion function and features:
 
@@ -46,6 +39,8 @@ const convertCurrency = () => {
 	const from = document.querySelector('#from').value;
 	const to = document.querySelector('#to').value;
 	const amount = document.querySelector('#amount-input').value;
+
+	const dbFrom = `${from}_${to}`;
 
 	// defining the DB
 	const db = new Dexie("rates_database");
@@ -69,28 +64,22 @@ const convertCurrency = () => {
           // reading the DB data
           .then((data) => { 
           	return db.from.get(fromC[0]) 
-          })
+          }).then(() => db.close())
 
-          // displaying DB data
-          .then((from) => {
-          		if (from.rate) {
-		          	const dbConv = from.rate * amount;
-		          	document.querySelector('#result-input').value = dbConv.toFixed(3);
+		// Storing the rate in a variable after multiplying it by the number given by the user in the amount input 
+		const conversion = result.results[`${from}_${to}`].val * amount;
 
-          		}
-          		// console.log(from.rate);
-          	
-          }).catch(err => console.log(err));
-
-
-		// // Storing the rate in a variable after multiplying it by the number given by the user in the amount input 
-		// const conversion = result.results[`${from}_${to}`].val * amount;
-
-		// // Showing the result on the result input after limiting it to three decimal numbers
+		// Showing the result on the result input after limiting it to three decimal numbers
 	
-		// 	document.querySelector('#result-input').value = conversion.toFixed(3);
+		document.querySelector('#result-input').value = conversion.toFixed(3);
 
-	}).catch(err => console.log('Failed to convert!'))
+	}).catch(() => {
+		db.open().then(data => db.from.get(dbFrom)).then(value => {
+			const dbConv = value.rate * amount;
+			document.querySelector('#result-input').value = dbConv.toFixed(3);
+		})
+
+	})          		
 }
 
 

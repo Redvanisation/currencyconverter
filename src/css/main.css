@@ -39,13 +39,30 @@ body {
 	font-family: var(--main-font);
 }
 
+
+.icon-container {
+	width: 20%;
+	display: inline-block;
+	padding: 2em;
+}
+
+#euro {
+	font-size: 12em;
+	padding: 15px 50px;
+	position: relative;
+	bottom: 100px;
+	border: 3px dotted var(--mocca-hex);
+	border-radius: 180px;
+	text-shadow: 1px 1px 1px var(--darkgray-rgba);
+}
+
 .container {
+	display: inline-block;
 	text-align: center;
 	position: relative;
-	top: 2em;
+	top: 0.5em;
 	padding: 0 0 0.5% 0;
-	width: 80%;
-	margin: auto;
+	width: 70%;
 	border-radius: 20px;
 	background-color: var(--black-rgba);
 	box-shadow: 2px 2px 20px var(--darkgray-rgba);
@@ -55,19 +72,18 @@ body {
 	margin: 0 0 2em 0;
 	font-family: var(--main-font);
 	color: var(--mocca-hex);
-	text-shadow: 2px 2px 3px var(--darkgray-rgba);
-	font-weight: 900;
-	background-color: var(--whity-hex);
+	background-color: var(--lightgray-rgba);
 	height: 100%;
 	width: 100%;
 	padding: 10px 0;
-	box-shadow: 1px 5px 10px var(--whity-rgba);
+	box-shadow: 1px 5px 10px var(--mocca-rgba);
 	border-radius: 6px;
 	font-size: larger;
 }
 
-#amount {
-	/*display: block;*/
+#the-header {
+	font-weight: 900;
+	text-shadow: 1px 1px 3px var(--mocca-rgba);
 }
 
 #amount-input {
@@ -136,8 +152,8 @@ footer {
 	background-color: var(--black-rgba);
 	color: var(--whity-hex);
 	height: 2%;
-	width: 50%;
-	margin: 5% auto 0 auto;
+	width: 90%;
+	margin: 2% auto 0 auto;
 	padding: 0.5em;
 	border-radius: 15px;
 }
@@ -145,4 +161,24 @@ footer {
 footer a {
 	text-decoration: none;
 	color: var(--mocca-hex);
+}
+
+@media only screen and (max-width: 900px) {
+    .icon-container {
+	display: none;
+	}
+
+	#euro {
+		display: none;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%;
+		margin-top: 10%;
+	}
+
 }

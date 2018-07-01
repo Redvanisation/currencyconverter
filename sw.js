@@ -1,5 +1,5 @@
 // Global Variables: 
-const staticCacheName = 'currency-converter-v2';
+const staticCacheName = 'currency-converter-v1';
 
 // Caching the app pages when the secrvice worker gets installed:
 
