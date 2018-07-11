@@ -7,15 +7,9 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies', {
 .then(res =>  {
 	const currencies = res.results;
 	for (let currency in currencies	) {
-		// making the the default currency as EURO
-		if (currencies[currency].id == "EUR") {
-			let addOption = `<option class="option" value="${currencies[currency].id}" selected>${currencies[currency].id} ${currencies[currency].currencySymbol} | ${currencies[currency].currencyName}</option>`;
-			const from = document.querySelector('#from').innerHTML += addOption;
-		} else if (currencies[currency].id == "USD"){
-			// Making the default currency to convert to is US Dollar
-				let addOption = `<option class="option" value="${currencies[currency].id}" selected>${currencies[currency].id} ${currencies[currency].currencySymbol} | ${currencies[currency].currencyName}</option>`;
-				const to = document.querySelector('#to').innerHTML += addOption;
-		} else {
+ 			
+ 			
+ 			console.log(currencies[currency].sort());
 			// Checking if the currency has a symbol in the API or not and if so show it on the list:
 				if (currencies[currency].currencySymbol) {
 					let addOption = `<option class="option" value="${currencies[currency].id}">${currencies[currency].id} ${currencies[currency].currencySymbol}| ${currencies[currency].currencyName}</option>`;
@@ -26,7 +20,7 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies', {
 					const from = document.querySelector('#from').innerHTML += addOption;
 					const to = document.querySelector('#to').innerHTML += addOption;
 				}
-			}
+	
 	}
 })
 .catch((err) => console.log('There has been an error!'));
@@ -75,8 +69,12 @@ const convertCurrency = () => {
 
 	}).catch(() => {
 		db.open().then(data => db.from.get(dbFrom)).then(value => {
-			const dbConv = value.rate * amount;
-			document.querySelector('#result-input').value = dbConv.toFixed(3);
+			if (value && amount) {
+				const dbConv = value.rate * amount;
+				document.querySelector('#result-input').value = dbConv.toFixed(3);
+			} else {
+				alert('Please Convert the Desired Currencies Online First');
+			}
 		})
 
 	})          		
