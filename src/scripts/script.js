@@ -7,9 +7,6 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies', {
 .then(res =>  {
 	const currencies = res.results;
 	for (let currency in currencies	) {
- 			
- 			
- 			console.log(currencies[currency].sort());
 			// Checking if the currency has a symbol in the API or not and if so show it on the list:
 				if (currencies[currency].currencySymbol) {
 					let addOption = `<option class="option" value="${currencies[currency].id}">${currencies[currency].id} ${currencies[currency].currencySymbol}| ${currencies[currency].currencyName}</option>`;
@@ -73,7 +70,7 @@ const convertCurrency = () => {
 				const dbConv = value.rate * amount;
 				document.querySelector('#result-input').value = dbConv.toFixed(3);
 			} else {
-				alert('Please Convert the Desired Currencies Online First');
+				alert('Please Select the Desired Currencies to Convert Online First');
 			}
 		})
 

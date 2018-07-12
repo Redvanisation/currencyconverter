@@ -5,10 +5,10 @@ const staticCacheName = 'currency-converter-v1';
 
 self.addEventListener('install', (event) => {
 	const cachedUrls = [
-		'/currencyconverter/',
-		'/currencyconverter/src/scripts/script.js',
-		'/currencyconverter/src/scripts/controller.js',
-		'/currencyconverter/src/css/main.css',
+		'/currencyconveter/',
+		'/currencyconveter/src/scripts/script.js',
+		'/currencyconveter/src/scripts/controller.js',
+		'/currencyconveter/src/css/main.css',
 		'https://fonts.googleapis.com/css?family=Raleway:400,700,900',
 		'https://free.currencyconverterapi.com/api/v5/currencies'
 	];
