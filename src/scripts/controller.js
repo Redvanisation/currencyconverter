@@ -18,7 +18,7 @@
 // Registering the service worker:
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js')
+	navigator.serviceWorker.register('/currencyconverter/sw.js', {scope: '/currencyconverter/'})
 	.then((reg) => {
 		if (!navigator.serviceWorker.controller) {
 			return;
