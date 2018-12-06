@@ -3,11 +3,18 @@
   "version": "2.0.0",
   "description": "A currency converter PWA",
   "main": "index.html",
-  "babel" : {
-  	"presets" : ["es2015"]
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "scripts": {
-    "start" : "babel src -d dist"
+    "start": "babel src -d dist",
+    "watch:sass": "node-sass src/sass/main.scss dist/css/main.comp.css -w",
+    "compile:sass": "node-sass src/sass/main.scss dist/css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/main.comp.css -o dist/css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css dist/css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -31,7 +38,12 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.5.0"
+    "gulp-connect": "^5.5.0",
+    "autoprefixer": "^9.3.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.10.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.0.1"
   },
   "dependencies": {
     "idb": "^2.1.3"

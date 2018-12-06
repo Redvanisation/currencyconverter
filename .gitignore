@@ -3,3 +3,5 @@
 # dependencies
 /node_modules
 gulpfile.js
+src/scripts/
+sw.js

@@ -1,0 +1,37 @@
+.main {
+
+    &__currencies {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+    .box1 {
+        order: 0;
+        width: 50%;
+        // border: 1px solid orange;
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+    
+    .box2 {
+        order: 1;
+        width: 50%;
+        // border: 1px solid green;
+        
+        @include respond(tab-port) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        @include respond(phone) {
+            width: 100%;
+        }
+    }

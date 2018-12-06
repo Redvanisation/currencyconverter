@@ -2,50 +2,58 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scare=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
 	<title>Redvanisation's Currency Converter</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">	
-	<link rel="stylesheet" type="text/css" href="src/css/main.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/main.comp.css">
 </head>
 <body>
+	<header class="header">
+		<h1 class="header__h1">RDVN Currency Converter</h1>
+	</header>
+	
 	<div class="container">
-		<header class="header">
-			<h1 id="the-header">Redvanisation Currency Converter</h1>
-		</header>
-					<div class="icon-container">
-				<i class="fas fa-euro-sign" id="euro"></i>
-			</div>
+		
 		<main class="main">
-
-			<label class="label" id="amount">
-				<h3>Amount:</h3> 
-				<h4>Please Enter the Desired Amount for Convertion</h4>
-				<h5>The Chosen Currencies Will be Saved For Offline Use</h5>
+			
+			<label class="main__label" id="amount">
+				<!-- <h3 class="main__label--h3">Amount:</h3>  -->
+				<h4 class="main__label--text">Please Enter the Desired Amount for Convertion, The Chosen Currencies Will be Saved For Offline Use, click the button bellow to swipe currencies</h4>
+				
 			</label>
-			<input type="number" id="amount-input" onkeyup="convertCurrency();">
-			<div class="second-line">
-				<label class="label">From: </label>
-				<select id="from">
-					<option>Please Select a Currency:</option>
-				</select>
-				<label class="label">To: 
-				<select id="to">
-					<option>Please Select a Currency:</option>
-				</select></label>
+			<div class="main__icon-container">
+				<i class="fas fa-euro-sign main__icon-container--icon" id="euro"></i>
 			</div>
-			<div class="third-line">
-				<input type="number" id="result-input" disabled>
+
+			<div class="main__currencies">
+				<div class="main__currencies--currency box1">
+					<select class="main__currencies--select main__currencies--select-blue" id="from">
+						<option class="main__currencies--option">Please Select a Currency:</option>
+					</select>
+					<input type="number" class="main__currencies--input main__currencies--input-blue" id="amount-input" onkeyup="convertCurrency();">
+				</div>
+				
+				<div class="main__currencies--currency box2">
+					<select class="main__currencies--select main__currencies--select-green" id="to">
+						<option class="main__currencies--option">Please Select a Currency:</option>
+					</select>
+					<input type="number" class="main__currencies--input main__currencies--input-green" id="result-input">
+				</div>
 			</div>
+
+			<footer class="footer">
+					<p class="footer__text">V 2.0.0 Made by <a class="footer__link" href="https://github.com/Redvanisation" target="_blank">Redvanisation</a> 2018</p>
+			</footer>
+
 		</main>
 	</div>
-	<section>
-		<p class="api-p" >This App has been developed and based on <a href="https://free.currencyconverterapi.com" target="_blank">https://free.currencyconverterapi.com</a> an API for converting different currencies </p>
+	<!-- <section class="disclamer">
+		<p class="disclamer__text" >This App has been developed and based on <a class="disclamer__link" href="https://free.currencyconverterapi.com" target="_blank">https://free.currencyconverterapi.com</a> an API for converting different currencies </p>
 	</section>
-	<footer>
-		<p>V 2.0.0 Made by <a href="https://github.com/Redvanisation" target="_blank">Redvanisation</a> 2018</p>
-	</footer>
+ -->
+
 	<script type="text/javascript" src="src/scripts/dexie.js"></script>
 	<script type="text/javascript" src="src/scripts/script.js"></script>
 	<script type="text/javascript" src="src/scripts/controller.js"></script>
