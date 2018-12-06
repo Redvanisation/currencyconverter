@@ -68,14 +68,16 @@ body {
   letter-spacing: .1rem; }
   @media only screen and (max-width: 56.25em) {
     .main__currencies--select {
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      font-weight: 400; } }
   @media only screen and (max-width: 37.5em) {
     .main__currencies--select {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       letter-spacing: 0; } }
   @media only screen and (max-width: 25.5em) {
     .main__currencies--select {
-      font-size: 1rem; } }
+      font-size: 1.15rem;
+      font-weight: 600; } }
 
 .main__currencies--input {
   font-size: 1.7rem;
