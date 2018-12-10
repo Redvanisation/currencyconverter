@@ -9,7 +9,7 @@
     ]
   },
   "scripts": {
-    "start": "babel src -d dist",
+    "start": "babel src/js -d dist/js",
     "watch:sass": "node-sass src/sass/main.scss dist/css/main.comp.css -w",
     "compile:sass": "node-sass src/sass/main.scss dist/css/main.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/main.comp.css -o dist/css/style.prefix.css",

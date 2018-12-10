@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
 	<title>Redvanisation's Currency Converter</title>
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">	
-	<link rel="stylesheet" type="text/css" href="dist/css/main.comp.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
 </head>
 <body>
 	<header class="header">
@@ -24,24 +24,26 @@
 				
 			</label>
 			<div class="main__icon-container">
-				<i class="fas fa-euro-sign main__icon-container--icon" id="euro"></i>
+				<i class="fas fa-euro-sign main__icon-container--icon" id="euro" onclick="convertCurrency();"></i>
 			</div>
 
 			<div class="main__currencies">
-				<div class="main__currencies--currency box1">
+				<div class="main__currencies--currency box1" id="box1">
 					<select class="main__currencies--select main__currencies--select-blue" id="from">
 						<option class="main__currencies--option">Please Select a Currency:</option>
 					</select>
 					<input type="number" class="main__currencies--input main__currencies--input-blue" id="amount-input" onkeyup="convertCurrency();">
 				</div>
 				
-				<div class="main__currencies--currency box2">
+				<div class="main__currencies--currency box2" id="box2">
 					<select class="main__currencies--select main__currencies--select-green" id="to">
 						<option class="main__currencies--option">Please Select a Currency:</option>
 					</select>
-					<input type="number" class="main__currencies--input main__currencies--input-green" id="result-input">
+					<input type="number" class="main__currencies--input main__currencies--input-green" id="result-input" onkeyup="convertCurrency();">
 				</div>
 			</div>
+
+			<!-- <button class="convert" onclick="convertCurrency();">Convert</button> -->
 
 			<footer class="footer">
 					<p class="footer__text">V 2.0.0 Made by <a class="footer__link" href="https://github.com/Redvanisation" target="_blank">Redvanisation</a> 2018</p>
@@ -54,9 +56,9 @@
 	</section>
  -->
 
-	<script type="text/javascript" src="src/scripts/dexie.js"></script>
-	<script type="text/javascript" src="src/scripts/script.js"></script>
-	<script type="text/javascript" src="src/scripts/controller.js"></script>
+	<script type="text/javascript" src="dist/js/dexie.js"></script>
+	<script type="text/javascript" src="dist/js/script.js"></script>
+	<script type="text/javascript" src="dist/js/controller.js"></script>
 	<script type="text/javascript" src="sw.js"></script>
 </body>
 </html>

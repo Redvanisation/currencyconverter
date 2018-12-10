@@ -20,7 +20,7 @@ var trackInstalling = function trackInstalling(worker) {
 // Registering the service worker:
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js').then(function (reg) {
+	navigator.serviceWorker.register('/currencyconveter/sw.js', { scope: '/currencyconveter/' }).then(function (reg) {
 		if (!navigator.serviceWorker.controller) {
 			return;
 		}

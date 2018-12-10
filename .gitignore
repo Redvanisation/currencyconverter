@@ -3,5 +3,5 @@
 # dependencies
 /node_modules
 gulpfile.js
-src/scripts/
-sw.js
+dist/css/main.comp.css
+dist/css/style.prefix.css
